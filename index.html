@@ -1,236 +1,165 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Webtastic</title>
-  </head>
-  <body>
-    <div class="container">
-      <header class="herosection">
-        <h1 class="herosection__sectionTitle">WEBTASTIC</h1>
-        <p>
-          Twoja strona w
-          <mark class="highlight__spread">Fantastycznym</mark> wydaniu
-        </p>
-      </header>
-      <main class="main">
-        <section class="main__section about">
-          <h2 class="about__title">KIM JESTEŚMY?</h2>
-          <p class="about__content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Accusantium nihil iusto repudiandae explicabo!
-          </p>
-        </section>
-        <section class="main__section skewb whyus">
-          <h2 class="whyus__title"></h2>
-          <p class="whyus__content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora
-            maxime, in ab eos sunt sapiente, laboriosam quaerat temporibus illo,
-            expedita quisquam numquam facere. Eveniet ullam obcaecati rem fuga
-            deserunt velit!
-          </p>
-        </section>
-        <section class="main__section projects">
-          <h2 class="projects__title">Nasze Projekty</h2>
-          <div class="projects__projects" id="projects"></div>
-          <a href="#" class="projects__more">więcej projektów</a>
-        </section>
-        <section class="main__section formwrapper">
-          <div class="notification">
-            <h2 class="notification__title">Uwaga!</h2>
-            <p class="notification__content">
-              Ceny tutaj wyświetlone nie są cenami finalnego produktu, a jedynie
-              są cenami poglądowymi - cena może wzrosnąć
-            </p>
-            <span class="notification__close"></span>
-          </div>
-          <form action="" class="priceform" id="priceform">
-            <fieldset class="priceform__field graphics">
-              <legend class="priceform__legend">
-                Czy posiadasz własne grafiki (logo, banery itd.)?
-              </legend>
-              <label for="graphicsyes" class="graphics__label"
-                >Tak<input
-                  type="radio"
-                  name="graphics"
-                  id="graphicsyes"
-                  value="0"
-                  checked/></label
-              ><label for="graphicsno" class="graphics__label"
-                >Nie - koszt grafik 400zł
-                <input type="radio" name="graphics" id="graphicsno" value="400"
-              /></label>
-            </fieldset>
-            <fieldset class="priceform__field model">
-              <legend class="priceform__legend">Model strony:</legend>
-              <ul class="model__list">
-                <li class="model__element">
-                  <label for="model1" class="model__value">
-                    <img src="#" alt="model1"/>
-                    <p class="model__price">1200zł</p>
-                    <input type="radio" name="model" id="model1" value="1200"
-                  /></label>
-                </li>
-                <li class="model__element">
-                  <label for="model2" class="model__value">
-                    <img src="#" alt="model2"/>
-                    <p class="model__price">2400zł</p>
-                    <input type="radio" name="model" id="model2" value="2400"
-                  /></label>
-                </li>
-                <li class="model__element">
-                  <label for="model3" class="model__value">
-                    <img src="#" alt="model3"/>
-                    <p class="model__price">3600zł</p>
-                    <input type="radio" name="model" id="model3" value="3600"
-                  /></label>
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="priceform__field addons" id="addons">
-              <legend class="priceform__legend">
-                Jakie elementy mają być na stronie?
-              </legend>
-              <!-- <ul class="addons__list">
-                <li class="addon__element">
-                  <label for="" class="addon__label">
-                    <p class="addon__description">Content</p>
-                    <input type="checkbox" name="" id="" />
-                  </label>
-                </li>
-                <li class="addon__element">
-                  <label for="" class="addon__label">
-                    <p class="addon__description">Content</p>
-                    <input type="checkbox" name="" id="" />
-                  </label>
-                </li>
-                <li class="addon__element">
-                  <label for="" class="addon__label">
-                    <p class="addon__description">Content</p>
-                    <input type="checkbox" name="" id="" />
-                  </label>
-                </li>
-                <li class="addon__element">
-                  <label for="" class="addon__label"
-                    ><p class="addon__description">Content</p>
-                    <input type="checkbox" name="" id=""
-                  /></label>
-                </li>
-                <li class="addon__element">
-                  <label for="" class="addon__label"
-                    ><p class="addon__description">Content</p>
-                    <input type="checkbox" name="" id=""
-                  /></label>
-                </li>
-                <li class="addon__element">
-                  <label for="" class="addon__label"
-                    ><p class="addon__description">Content</p>
-                    <input type="checkbox" name="" id=""
-                  /></label> -->
-                </li>
-              </ul>
-            </fieldset>
-            <button class="priceform__submit">Oblicz</button>
-          </form>
-          <p class="priceform__output" id="output">
-            Kwota:<span id="result">0zł</span>
-          </p>
-        </section>
-        <section class="contact">
-          <form action="" class="contactform">
-            <h2 class="contactform__title">Skontaktuj się z nami</h2>
-            <label for="imie">
-              Imie:
-              <input
-                type="text"
-                name="imie"
-                id="imie"
-                class="contactform__input"
-              />
-            </label>
-            <label for="nazwisko">
-              Nazwisko:
-              <input
-                type="text"
-                name="nazwisko"
-                id="nazwisko"
-                class="contactform__input"
-              />
-            </label>
-            <label for="wiadomosc">
-              Wiadomość
-              <textarea
-                name="wiadomosc"
-                id="wiadomosc"
-                cols="30"
-                rows="10"
-                class="contactform__textarea"
-              ></textarea>
-            </label>
-            <button class="contactform__submit">Wyślij</button>
-          </form>
-        </section>
-      </main>
-      <footer class="footer">
-        <p class="footer__author">
-          Made by Webtastic
-        </p>
-      </footer>
-    </div>
-    <script>
-        const addony = [
-  {
-    id: "resp",
-    name: "Pełna rosponsywność - 150zł",
-    price: 150
-  },
-  {
-    id: "contactform",
-    name: "Formularz kontaktowy - 50zł",
-    price: 50
-  },
-  {
-    id: "wordpress",
-    name: "Integracja z Wordpressem - 30zł",
-    price: 30
-  },
-  {
-    id: "newsletter",
-    name: "Funkcjonalny newsletter - 120zł",
-    price: 120
-  },
-  {
-    id: "login",
-    name: "Pełna System logowania się do serwisu - 60zł",
-    price: 60
-  },
-  {
-    id: "other",
-    name: "Inne wybrane przez użytkownika",
-    price: 0
-  }
-];
 
-  const addonsfield = document.querySelector("#addons");
-  const list = document.createElement("ul");
-  addonsfield.forEach(addon => {
-    const field = document.createElement("li");
-    const label = document.createElement("label");
-    label.setAttribute("for", `${addon.id}`);
-    label.innerText = `${addon.name}`;
-    const input = document.createElement("input");
-    input.setAttribute("type", "checkbox");
-    input.setAttribute("name", `${addon.id}`);
-    input.setAttribute("id", `${addon.id}`);
-    input.setAttribute("value", `${addon.price}`);
-    label.appendChild(input);
-    field.appendChild(label);
-    list.appendChild(field);
-  });
-  addonsfield.appendChild(list);
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Webtastic</title>
+	<link rel="stylesheet" href="styles/main.css" />
+	<script src="https://kit.fontawesome.com/55460b0799.js" crossorigin="anonymous"></script>
+</head>
 
-    </script>
-  </body>
+<body>
+	<span class="container">
+		<nav class="navigation" id="navbar">
+			<ul class="navigation__list list">
+				<li class="list__element">
+					<a href="#about" class="list__anchor">
+						O nas
+					</a>
+				</li>
+				<li class="list__element">
+					<a href="#projects1" class="list__anchor">
+						Projekty
+					</a>
+				</li>
+				<li class="list__element">
+					<a href="#priceform1" class="list__anchor">
+						Wycena strony
+					</a>
+				</li>
+				<li class="list__element">
+					<a href="#" class="list__anchor">
+						Kontakt
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<header class="herosection">
+			<h1 class="herosection__sectionTitle">WEBTASTIC</h1>
+			<p class="herosection__content">
+				Twoja strona w&nbsp;<mark class="highlight__spread">Fantastycznym</mark>
+				wydaniu
+			</p>
+			<a href="#about"><img src="./images/icons/arrow.svg" alt="arrow" id="calltoaction" /></a>
+		</header>
+		<main class="main">
+			<section class="main__section about" id="about">
+				<h2 class="about__title">KIM JESTEŚ<mark>MY</mark>?</h2>
+				<p class="about__content">
+					Jesteśmy firmą specjalizującą się w tworzeniu
+					<mark>fantastycznych</mark> witryn internetowych, które zapadają w pamięć
+				</p>
+			</section>
+			<section class="main__section skewb whyus">
+				<div class="whyus__wrapper">
+					<h2 class="whyus__title">Dlaczego my?</h2>
+					<p class="whyus__content">
+						Jesteśmy firmą posiadającą duże zrozumienie potrzeb klienta, dzięki czemu potrafimy dostarczyć
+						produkty najwyższej jakości spełniająca wasze wymagania.
+					</p>
+				</div>
+			</section>
+			<section class="main__section projects" id="projects1">
+				<h2 class="projects__maintitle">Nasze Projekty</h2>
+				<div class="projects__projects" id="projects"></div>
+				<a href="#" class="projects__more">więcej projektów</a>
+			</section>
+			<section class="main__section formwrapper" id="priceform1">
+				<h2 class="formwrapper__title">
+					Zaprojektuj swoją witrynę
+				</h2>
+				<div class="notification" id="notification">
+					<h2 class="notification__title">Uwaga!</h2>
+					<p class="notification__content">
+						Ceny tutaj wyświetlone nie są cenami finalnego produktu, a jedynie są cenami poglądowymi - cena
+						może wzrosnąć
+					</p>
+					<span class="notification__close" id="close"><i class="fas fa-times"></i></span>
+				</div>
+				<form action="#" class="priceform" id="priceform">
+					<fieldset class="priceform__field graphics">
+						<legend class="priceform__legend">
+							Czy posiadasz własne grafiki (logo, banery itd.)?
+						</legend>
+						<label for="graphicsyes" class="graphics__label">Tak <input type="radio" name="graphics"
+								id="graphicsyes" value="0" checked /><span class="radio"></span></label>
+						<label for="graphicsno" class="graphics__label">Nie - koszt grafik 400zł <input type="radio"
+								name="graphics" id="graphicsno" value="400" /><span class="radio"></span></label>
+					</fieldset>
+					<fieldset class="priceform__field model" id="models">
+						<legend class="priceform__legend">Model strony:</legend>
+						<ul class="model__list">
+							<li class="model__element">
+								<label for="model1" class="model__value">
+									<img src="./images/model1.png" alt="model1" />
+									<p class="model__price">1200zł</p>
+									<input type="radio" name="model" id="model1" value="1200" />
+									<span class="radio"></span>
+								</label>
+							</li>
+							<li class="model__element">
+								<label for="model2" class="model__value">
+									<img src="./images/model2.png" alt="model2" />
+									<p class="model__price">2400zł</p>
+									<input type="radio" name="model" id="model2" value="2400" checked />
+
+									<span class="radio"></span>
+								</label>
+							</li>
+							<li class="model__element">
+								<label for="model3" class="model__value">
+									<img src="./images/model3.png" alt="model3" />
+									<p class="model__price">3600zł</p>
+									<input type="radio" name="model" id="model3" value="3600" />
+									<span class="radio"></span>
+								</label>
+							</li>
+						</ul>
+					</fieldset>
+					<fieldset class="priceform__field addons" id="addons">
+						<legend class="priceform__legend">
+							Jakie elementy mają być na stronie?
+						</legend>
+					</fieldset>
+					<button class="priceform__submit">Oblicz</button>
+				</form>
+				<p class="priceform__output">Kwota: <span id="result">0zł</span></p>
+			</section>
+			<section class="contact">
+				<form action="#" class="contactform" method="POST" id="contactform">
+					<h2 class="contactform__title">Skontaktuj się z nami</h2>
+					<label for="imie">
+						<input type="text" name="imie" id="imie" class="contactform__input" placeholder="imie" />
+					</label>
+					<label for="e-mail">
+						<input type="text" name="e-mail" id="e-mail" class="contactform__input" placeholder="e-mail" />
+					</label>
+					<label for="wiadomosc">
+						<textarea name="wiadomosc" id="wiadomosc" class="contactform__textarea"
+							placeholder="wiadomość"></textarea>
+					</label>
+					<button class="contactform__submit">Wyślij</button>
+				</form>
+			</section>
+		</main>
+		<footer class="footer">
+			<p class="footer__author">&copy;Made by Webtastic&trade;</p>
+		</footer>
+		</div>
+		<script>
+			const contactform = document.querySelector("#contactform")
+			contactform.addEventListener('submit', function(e){
+				e.preventDefault();
+			})
+		</script>
+		<script src="js/form/form.js"></script>
+		<script src="js/navigation/navigation.js"></script>
+		<script src="js/projects/projects.js"></script>
+		<script src="js/checkbox/checkbox.js"></script>
+		<script src="js/notifications/notification.js"></script>
+		<script src="js/calculate/calc.js"></script>
+</body>
+
 </html>
