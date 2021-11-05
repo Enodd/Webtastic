@@ -1,0 +1,13 @@
+.footer {
+  padding: 1rem;
+  background-color: $purple;
+  width: 100vw;
+
+  &__author {
+    font-size: 1.4rem;
+    text-align: center;
+    font-family: $headerFont;
+    color: $yellow;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,56 @@
+$box: clamp(0.8rem, 12vw, 1.75rem);
+
+@keyframes check {
+	from {
+		transform: scale(0);
+	}
+
+	to {
+		transform: scale(1);
+	}
+}
+
+@keyframes uncheck {
+	from {
+		transform: scale(1);
+	}
+
+	to {
+		transform: scale(0);
+	}
+}
+
+.addons {
+	&__list {
+		width: 75%;
+		margin: 0 auto;
+		@include flex(column, center, left);
+		list-style: none;
+		color: white;
+	}
+}
+
+.checkbox {
+	@include flex(row, space-between);
+	margin: 1em;
+	cursor: pointer;
+	font-family: $font;
+
+	&__outerbox {
+		width: $box;
+		height: $box;
+		border: 3px solid $yellow;
+		padding: 2px;
+		border-radius: 2px;
+		cursor: pointer;
+
+		.fbx {
+			width: 100%;
+			height: 100%;
+			background-color: $yellow;
+			border-radius: 1px;
+			animation: check 0.1s ease-out;
+			cursor: pointer;
+		}
+	}
+}

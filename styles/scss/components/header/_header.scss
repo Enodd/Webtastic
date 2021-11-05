@@ -1,0 +1,70 @@
+.herosection {
+	@include flex(column);
+	position: relative;
+	border: clamp(2px, 2vw, 6px) solid $yellow;
+	position: relative;
+
+	&::after {
+		z-index: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		content: "";
+		width: 100%;
+		height: 100%;
+		background-image: $heroPic;
+		opacity: 0.2;
+	}
+
+	width: 100%;
+	min-height: 100vh;
+
+	&__sectionTitle {
+		font-size: clamp(2rem, 6vw, 8rem);
+		color: white;
+		font-family: $headerFont;
+		letter-spacing: 1rem;
+		text-align: center;
+		user-select: none;
+		position: relative;
+		margin-bottom: clamp(1rem, 2vw, 2rem);
+
+		&::before {
+			content: "WEB";
+			font-size: clamp(2rem, 6vw, 8rem);
+			color: $yellow;
+			font-family: $headerFont;
+			letter-spacing: 1rem;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+
+		&::after {
+			content: "";
+			height: 3px;
+			width: 40%;
+			position: absolute;
+			background-color: $yellow;
+			top: 110%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	&__content {
+		color: white;
+		font-family: $font;
+		font-size: clamp(2rem, 6vw, 3rem);
+		font-weight: bold;
+		text-align: center;
+		width: 50%;
+	}
+}
+
+#calltoaction {
+	position: absolute;
+	left: 50%;
+	bottom: 10%;
+	transform: translate(-50%, -10%);
+}
