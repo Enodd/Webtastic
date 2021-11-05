@@ -27,13 +27,17 @@ fieldset {
 		font-size: clamp(2rem, 10vw, 3rem);
 		font-family: $headerFont;
 		color: $yellow;
+		text-align: center;
 		font-weight: bold;
 		margin-bottom: 1rem;
 	}
 }
 
 .notification {
-	width: 75%;
+	width: 90%;
+	@include break(xxl) {
+		width: 75%;
+	}
 	margin-bottom: 1rem;
 	padding: 2rem;
 	background-color: #fd3d3d8f;
@@ -63,7 +67,10 @@ fieldset {
 }
 
 .priceform {
-	width: 75%;
+	width: 90%;
+	@include break(xxl) {
+		width: 75%;
+	}
 	@include flex(column);
 
 	&__field {
@@ -90,7 +97,6 @@ fieldset {
 			font-size: 1.4rem;
 			font-family: $font;
 			font-weight: bold;
-
 		}
 	}
 
@@ -103,7 +109,7 @@ fieldset {
 		font-family: $font;
 		color: $darkPurple;
 		font-weight: bold;
-		border-radius: .6em;
+		border-radius: 0.6em;
 
 		&:active {
 			background-color: darken($yellow, 10%);
@@ -149,7 +155,7 @@ fieldset {
 			visibility: hidden;
 
 			&:checked {
-				&~.radio:after {
+				& ~ .radio:after {
 					display: block;
 					animation: show 0.1s ease-in-out;
 				}
@@ -172,7 +178,6 @@ fieldset {
 		position: relative;
 		min-height: 18rem;
 		list-style: none;
-
 	}
 
 	&__value {
@@ -182,12 +187,11 @@ fieldset {
 		min-height: 18rem;
 		color: $yellow;
 
-
 		input {
 			visibility: hidden;
 
 			&:checked {
-				&~.radio:after {
+				& ~ .radio:after {
 					display: block;
 					animation: show 0.1s ease-in-out;
 				}
@@ -199,7 +203,7 @@ fieldset {
 		width: fit-content;
 		font-family: $font;
 		font-weight: bold;
-		margin-top: .8em;
+		margin-top: 0.8em;
 	}
 
 	img {

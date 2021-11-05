@@ -22,7 +22,10 @@ $box: clamp(0.8rem, 12vw, 1.75rem);
 
 .addons {
 	&__list {
-		width: 75%;
+		width: 100%;
+		@include break(xxl) {
+			width: 75%;
+		}
 		margin: 0 auto;
 		@include flex(column, center, left);
 		list-style: none;

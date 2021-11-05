@@ -3,7 +3,10 @@
 	@include flex(column, center, center);
 	gap: 2em;
 	&__projects {
-		width: 50%;
+		width: 80%;
+		@include break(xxl) {
+			width: 50%;
+		}
 		height: 100%;
 		padding: 2rem;
 		@include flex(row, space-evenly);

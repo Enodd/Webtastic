@@ -306,7 +306,7 @@
 }
 
 .addons__list {
-  width: 75%;
+  width: 100%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -323,6 +323,12 @@
           align-items: left;
   list-style: none;
   color: white;
+}
+
+@media (min-width: 1920px) {
+  .addons__list {
+    width: 75%;
+  }
 }
 
 .checkbox {
@@ -453,7 +459,7 @@
 .whyus:before {
   content: "";
   position: absolute;
-  top: -80%;
+  top: -40%;
   left: 0;
   background-color: #ffdf74;
   width: 100%;
@@ -461,6 +467,21 @@
   -webkit-transform: skewY(-3deg);
           transform: skewY(-3deg);
   z-index: -1;
+}
+
+@media (min-width: 1920px) {
+  .whyus:before {
+    content: "";
+    position: absolute;
+    top: -80%;
+    left: 0;
+    background-color: #ffdf74;
+    width: 100%;
+    height: clamp(10rem, 24vw, 30rem);
+    -webkit-transform: skewY(-3deg);
+            transform: skewY(-3deg);
+    z-index: -1;
+  }
 }
 
 .whyus__wrapper {
@@ -501,7 +522,7 @@
 }
 
 .projects__projects {
-  width: 50%;
+  width: 80%;
   height: 100%;
   padding: 2rem;
   display: -webkit-box;
@@ -518,6 +539,12 @@
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+}
+
+@media (min-width: 1920px) {
+  .projects__projects {
+    width: 50%;
+  }
 }
 
 .projects__wrapper {
@@ -662,17 +689,24 @@ fieldset:nth-of-type(3) {
   font-size: clamp(2rem, 10vw, 3rem);
   font-family: "Rubik", sans-serif;
   color: #ffdf74;
+  text-align: center;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
 .notification {
-  width: 75%;
+  width: 90%;
   margin-bottom: 1rem;
   padding: 2rem;
   background-color: #fd3d3d8f;
   border-radius: 1rem;
   position: relative;
+}
+
+@media (min-width: 1920px) {
+  .notification {
+    width: 75%;
+  }
 }
 
 .notification__title {
@@ -697,7 +731,7 @@ fieldset:nth-of-type(3) {
 }
 
 .priceform {
-  width: 75%;
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -711,6 +745,12 @@ fieldset:nth-of-type(3) {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (min-width: 1920px) {
+  .priceform {
+    width: 75%;
+  }
 }
 
 .priceform__field {
@@ -749,7 +789,7 @@ fieldset:nth-of-type(3) {
   font-family: "Roboto", sans-serif;
   color: #1e005b;
   font-weight: bold;
-  border-radius: .6em;
+  border-radius: 0.6em;
 }
 
 .priceform__submit:active {
@@ -887,7 +927,7 @@ fieldset:nth-of-type(3) {
   width: fit-content;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  margin-top: .8em;
+  margin-top: 0.8em;
 }
 
 .model img {
