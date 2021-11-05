@@ -19,7 +19,6 @@ projects.forEach(project => {
 	const { name, description, bannerPath, link } = project;
 	const box = document.createElement("a");
 	box.setAttribute("class", "projects__wrapper");
-	// box.setAttribute("href", `/${name.toLowerCase()}`);
 	box.setAttribute("href", link);
 	const head = document.createElement("h3");
 	head.setAttribute("class", "projects__title");
