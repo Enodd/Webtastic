@@ -1,6 +1,6 @@
 # Webtastic - projekt witryny internetowej
 Link do strony: [4bdn16.github.io](https://4bdn16.github.io/Webtastic/)
-Autor: Damian Nowak
+Autor: [Damian Nowak](https://github.com/Enodd)
 
 -------
 ### Z elementów na stronie, na które warto zwrócić uwagę to:
