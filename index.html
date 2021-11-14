@@ -7,34 +7,12 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<title>Webtastic</title>
 	<link rel="stylesheet" href="styles/main.css" />
-	<script src="https://kit.fontawesome.com/55460b0799.js" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/7afa62f1bd.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 	<span class="container">
 		<nav class="navigation" id="navbar">
-			<ul class="navigation__list list">
-				<li class="list__element">
-					<a href="#about" class="list__anchor">
-						O nas
-					</a>
-				</li>
-				<li class="list__element">
-					<a href="#projects1" class="list__anchor">
-						Projekty
-					</a>
-				</li>
-				<li class="list__element">
-					<a href="#priceform1" class="list__anchor">
-						Wycena strony
-					</a>
-				</li>
-				<li class="list__element">
-					<a href="#" class="list__anchor">
-						Kontakt
-					</a>
-				</li>
-			</ul>
 		</nav>
 		<header class="herosection">
 			<h1 class="herosection__sectionTitle">WEBTASTIC</h1>
@@ -127,7 +105,7 @@
 				</form>
 				<p class="priceform__output">Kwota: <span id="result">0zł</span></p>
 			</section>
-			<section class="contact">
+			<section class="contact" id="contact">
 				<form action="#" class="contactform" method="POST" id="contactform">
 					<h2 class="contactform__title">Skontaktuj się z nami</h2>
 					<label for="imie">
@@ -145,13 +123,19 @@
 			</section>
 		</main>
 		<footer class="footer">
-			<p class="footer__author">&copy;Made by Webtastic&trade;</p>
+			<p class="footer__author"><a href="github.com/Enodd">&copy;Made by Enodd&trade;</a></p>
 		</footer>
 		</div>
 		<script>
 			const contactform = document.querySelector("#contactform")
 			contactform.addEventListener('submit', function(e){
 				e.preventDefault();
+			})
+			const calltoaction = document.querySelector("#calltoaction")
+			calltoaction.addEventListener("click", function(e){
+				e.preventDefault();
+				const target = document.querySelector(this.parentElement.getAttribute("href"))
+				target.scrollIntoView({behavior : "smooth"})
 			})
 		</script>
 		<script src="js/form/form.js"></script>

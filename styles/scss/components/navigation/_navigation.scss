@@ -1,13 +1,3 @@
-@keyframes hide {
-  from {
-    transform: scaleY(1);
-  }
-
-  to {
-    transform: scaleY(0);
-  }
-}
-
 .navigation {
   width: fit-content;
   position: fixed;
@@ -20,7 +10,7 @@
   &__list {
     @include flex(row, center, center);
     list-style: none;
-    gap: 2em;
+    gap: 1em;
   }
 
   z-index: 40;
@@ -55,4 +45,63 @@
       }
     }
   }
+}
+
+.hiddencontent {
+  display: none;
+}
+
+@keyframes menu {
+  from {
+    bottom: 5%;
+    right: 10%;
+    width: 3rem;
+    height: 2.5rem;
+  }
+
+  to {
+    bottom: 0%;
+    right: 0%;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+.navbox {
+  position: fixed;
+  bottom: 5%;
+  right: 10%;
+  @include size(3rem, 2.5rem);
+  padding: 1.8rem 2rem;
+  @include flex(column);
+  border-radius: 1rem;
+  transition: 0.3s ease-in-out;
+  background: $purple;
+  border: 3px $darkPurple solid;
+
+  i {
+    font-size: clamp(1rem, 10vw, 2rem);
+    color: $yellow;
+  }
+}
+
+.screensize {
+  animation: .3s menu ease-in-out;
+  width: 100vw;
+  height: 100vh;
+  bottom: 0;
+  right: 0;
+  @include glassmorph($darkPurple, #000, 0, 6px);
+  padding: 1rem;
+  gap: 1rem;
+
+  #icon {
+    margin-bottom: 2rem;
+    font-size: clamp(1rem, 10vw, 3rem);
+  }
+
+  .list {
+    @include flex(column);
+  }
+
 }

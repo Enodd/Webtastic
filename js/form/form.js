@@ -41,8 +41,8 @@ addons.forEach(addon => {
 	} = addon;
 	const field = document.createElement("li");
 	const label = document.createElement("label");
-	label.setAttribute("class", "checkbox");
-	label.style.userSelect = "none";
+	field.setAttribute("class", "checkbox");
+	field.style.userSelect = "none";
 	label.innerText = name;
 	const check = document.createElement("div");
 	check.setAttribute("class", "checkbox__outerbox");
@@ -52,8 +52,8 @@ addons.forEach(addon => {
 	input.setAttribute("id", id);
 	input.setAttribute("value", price);
 	check.appendChild(input);
-	label.appendChild(check);
 	field.appendChild(label);
+	field.appendChild(check);
 	list.appendChild(field);
 });
 addonsfield.appendChild(list);

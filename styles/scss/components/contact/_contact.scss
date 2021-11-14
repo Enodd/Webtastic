@@ -5,7 +5,12 @@
 
 .contactform {
 	@include flex(column);
-	@include skewb($yellow, 150%, -30%);
+	@include skewb($yellow, 120%, -10%);
+
+	@include break(lg) {
+		@include skewb($yellow, 150%, -30%);
+	}
+
 	position: relative;
 	width: 100%;
 

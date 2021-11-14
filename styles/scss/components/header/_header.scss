@@ -1,5 +1,5 @@
 .herosection {
-	@include flex(column);
+	@include flex(column, center, center);
 	position: relative;
 	border: clamp(2px, 2vw, 6px) solid $yellow;
 	position: relative;
@@ -17,24 +17,29 @@
 	}
 
 	width: 100%;
-	min-height: 100vh;
+	min-height: 70vh;
+
+	@include break(lg) {
+		min-height: 100vh;
+	}
 
 	&__sectionTitle {
-		font-size: clamp(2rem, 6vw, 8rem);
+		font-size: clamp(2.2rem, 6vw, 8rem);
 		color: white;
 		font-family: $headerFont;
-		letter-spacing: 1rem;
+		letter-spacing: .5rem;
 		text-align: center;
+		width: fit-content;
 		user-select: none;
 		position: relative;
 		margin-bottom: clamp(1rem, 2vw, 2rem);
 
 		&::before {
 			content: "WEB";
-			font-size: clamp(2rem, 6vw, 8rem);
+			font-size: clamp(2.2rem, 6vw, 8rem);
 			color: $yellow;
 			font-family: $headerFont;
-			letter-spacing: 1rem;
+			letter-spacing: .5rem;
 			position: absolute;
 			left: 0;
 			top: 0;
@@ -58,7 +63,11 @@
 		font-size: clamp(2rem, 6vw, 3rem);
 		font-weight: bold;
 		text-align: center;
-		width: 50%;
+		width: fit-content;
+
+		@include break(lg) {
+			max-width: 50%;
+		}
 	}
 }
 
@@ -67,4 +76,5 @@
 	left: 50%;
 	bottom: 10%;
 	transform: translate(-50%, -10%);
+	@include size(clamp(2rem, 15vw, 4rem), clamp(2rem, 15vw, 4rem));
 }

@@ -1,4 +1,4 @@
-$box: clamp(0.8rem, 12vw, 1.75rem);
+$box: 1.5rem;
 
 @keyframes check {
 	from {
@@ -23,21 +23,31 @@ $box: clamp(0.8rem, 12vw, 1.75rem);
 .addons {
 	&__list {
 		width: 100%;
+
 		@include break(xxl) {
 			width: 75%;
 		}
+
 		margin: 0 auto;
 		@include flex(column, center, left);
 		list-style: none;
 		color: white;
+		font-family: $font;
 	}
 }
 
 .checkbox {
-	@include flex(row, space-between);
-	margin: 1em;
+
+	@include break(xs) {
+		@include flex(row, space-between);
+	}
+
+	margin: 1em 0;
 	cursor: pointer;
-	font-family: $font;
+
+	label {
+		width: 75%;
+	}
 
 	&__outerbox {
 		width: $box;

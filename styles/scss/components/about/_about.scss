@@ -26,8 +26,9 @@
 		font-family: $headerFont;
 		font-weight: bold;
 		color: white;
-		font-size: clamp(2rem, 12vw, 4em);
+		font-size: clamp(2rem, 12vw, 3rem);
 		text-align: center;
+
 		&:first-letter {
 			font-size: clamp(2.5rem, 12vw, 5rem);
 		}
@@ -37,9 +38,14 @@
 		font-family: $font;
 		color: white;
 		font-size: clamp(1rem, 6vw, 1.75rem);
-		width: 50%;
+		width: 70%;
+
+		@include break(lg) {
+			width: 50%;
+		}
+
 		text-align: center;
-		padding: 3em;
+		padding: 2em;
 		border: 7px solid $yellow;
 		@include glassmorph();
 	}
