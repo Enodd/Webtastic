@@ -1,5 +1,5 @@
 # Webtastic - projekt witryny internetowej
-Link do strony: [4bdn16.github.io](https://4bdn16.github.io/Webtastic/)
+Link do strony: [enodd.github.io/Webtastic](https://enodd.github.io/Webtastic/)
 Autor: [Damian Nowak](https://github.com/Enodd)
 
 -------
